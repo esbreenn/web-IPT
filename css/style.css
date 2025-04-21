@@ -1,0 +1,561 @@
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #4e8cd3, #64a3e3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  gap: 1rem; /* 🔽 reducí el espacio entre logo y menú */
+
+}
+
+.header-logo img {
+  height: 40px;
+  
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.menu li a img.icono {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.menu li a:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #4e8cd3;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  display: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  display: block;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+  
+/*.servicios{
+    list-style-type: none;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+    */
+
+.presentacion{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    text-align: center;
+}
+
+.sobre-nosotros{
+    width: 100%;
+    box-shadow: 8px 8px 5px #666666;
+    padding:2rem ;
+}
+.sobre-nosotros h2{
+    text-align: center;
+    color: #2471A3; 
+}
+
+  
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.servicios li {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.servicios li:hover {
+    transform: scale(1.05);
+}
+
+.servicios h3 {
+    margin-bottom: 0.5rem;
+    color: #105bcc;
+}
+
+.servicios p {
+    font-size: 0.9rem;
+    color: #333;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  .form-opiniones {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .form-opiniones ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .form-opiniones li {
+    margin-bottom: 20px;
+  }
+  
+  
+  .form-opiniones label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2471A3; 
+  }
+  
+  /* Inputs, selects y textarea con estilo */
+  .form-opiniones input,
+  .form-opiniones select,
+  .form-opiniones textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a8cce3;
+    border-radius: 8px;
+    background-color: #eaf6fb;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-opiniones input:focus,
+  .form-opiniones select:focus,
+  .form-opiniones textarea:focus {
+    outline: none;
+    border-color: #50a6ec;
+    box-shadow: 0 0 5px rgba(80, 166, 236, 0.5);
+  }
+  
+  /* Botón con efecto hover */
+  .form-opiniones button {
+    background-color: #50a6ec;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-opiniones button:hover {
+    background-color: #358fd3;
+  }
+  
+  /* Opiniones mostradas */
+  #listaOpiniones {
+    margin-top: 30px;
+  }
+  
+  #listaOpiniones h3 {
+    color: #2471A3;
+    margin-bottom: 10px;
+  }
+  
+  #opinionesContainer li {
+    background: #dff1fd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #50a6ec;
+  }
+
+
+  .contador {
+    width: 100vw;
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .promo-img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+  }
+.contador h1 {
+  
+  color: #4c97ec;
+}  
+  
+  
+  .countdown .reloj {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .reloj div {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .reloj span {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .reloj p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+
+
+  /*mismo formulario que el de opiniones*/
+  
+  .form-reclamos {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f7f9fc;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .form-reclamos h3 {
+    text-align: center;
+    color: #2471A3;
+    margin-bottom: 20px;
+  }
+  
+  .form-reclamos ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .form-reclamos li {
+    margin-bottom: 18px;
+  }
+  
+  .form-reclamos label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2471A3;
+  }
+  
+  .form-reclamos input[type="text"],
+  .form-reclamos input[type="email"],
+  .form-reclamos input[type="tel"],
+  .form-reclamos input[type="DNI"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cbe4eb;
+    border-radius: 8px;
+    background-color: #eef7fa;
+    transition: border-color 0.3s;
+  }
+  
+  .form-reclamos input:focus {
+    border-color: #50a6ec;
+    outline: none;
+  }
+  
+  .form-reclamos input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+  }
+  
+  .form-reclamos button {
+    background-color: #50a6ec;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .form-reclamos button:hover {
+    background-color: #358fd3;
+  }
+  .reclamos-enviados {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #eef7fa;
+    border: 2px solid #cbe4eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .reclamos-enviados h3 {
+    text-align: center;
+    color: #2471A3;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  
+  .reclamos-enviados ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reclamos-enviados li {
+    background-color: white;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-left: 4px solid #50a6ec;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+  }
+  
+  .reclamos-enviados li:hover {
+    transform: translateX(5px);
+    background-color: #f5fcff;
+  }
+  .preguntas-frecuentes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+   
+  }
+
+  .relleno {
+    background-image: linear-gradient(rgba(73, 81, 102, 0.8), rgba(78, 88, 112, 0.85)),
+      url(https://www.eutelsat.com/files/Background/banner-iot-towers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    max-height: 800px;
+    overflow: auto;
+    border-radius: 10px;
+  }
+  
+  .relleno h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .seccion-relleno h3 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .seccion-relleno p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .pregunta {
+    margin: 10px;
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+    
+    
+  }
+  
+  .pregunta h3,
+  .pregunta_encabezado {
+    font-size: 1.5rem; /* sin espacio */
+    margin: 0;
+    cursor: pointer;
+    color: #50a6ec;
+  }
+  
+  .respuesta {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .respuesta.activo {
+    max-height: 500px; /* lo suficiente para mostrar el contenido */
+    opacity: 1;
+  }
+  .pregunta:hover {
+    background-color: #f1faff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .footer {
+    /* position: fixed;*/
+     bottom: 0;
+     width: 100%;
+     background-color: #50a6ec;
+     color: white;
+     padding: 1rem;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+   }
+   .footer-section {
+     min-width: 150px;
+     
+   }
+  /* 🌐 Estilos responsive */
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu li a {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  .form-opiniones,
+  .form-reclamos,
+  .reclamos-enviados {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicios li {
+    width: 90%;
+  }
+
+  .pregunta {
+    width: 90%;
+  }
+
+  .relleno {
+    padding: 2rem 1rem;
+  }
+
+  .relleno h2 {
+    font-size: 2rem;
+  }
+
+  .seccion-relleno h3 {
+    font-size: 1.4rem;
+  }
+
+  .seccion-relleno p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+}
